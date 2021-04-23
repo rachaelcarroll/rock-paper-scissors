@@ -7,9 +7,16 @@ class Game{
     this.computerTurn = null;
     this.humanFighter = null;
     this.computerFighter = null;
+    this.classicFighters = ['rock', 'paper', 'scissors'];
+    this.magicFighters = ['spell', 'voodoo', 'crystals'];
   }
 
   drawGame(){
+    if(this.humanFighter === this.computerFighter) {
+      return true
+    } else {
+      return false
+    }
 
   }
 
