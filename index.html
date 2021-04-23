@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Rock, Paper, Scissors!</title>
+</head>
+<body>
+  <main class="main-page" id="mainPage">
+    <section class="left-section" id="leftSection">
+      <h1 class="player-emoji" id="playerEmoji">🧙</h1>
+      <p class="human-player" id="humanPlayer">Player1</p>
+      <p class="human-wins" id="humanWins">Wins:<span class="player-num-wins" id="playerNumWins"></span>
+    </section>
+    <section class="middle-section" id="middleSection">
+      <h2 class="game-header" id="gameHeader">Rock, Paper, Scissors</h2>
+      <h3 class="choose-game" id="chooseGame">Choose your game!</h3>
+      <section class="game-choices-container" id="gameChoicesContainer">
+        <article class="classic-game" id="classicGame">
+          <h4 class="classic-header">✂️CLASSIC🪨</h4>
+          <p class="rock-scissors">Rock > Scissors</p>
+          <p class="paper-rock">Paper > Rock</p>
+          <p class="scissors-paper">Scissors > Paper</p>
+        </article>
+        <article class="magic-game" id="magicGame">
+          <h4 class="magic-header">🔮MAGIC🪄</h4>
+          <p class="voodoo-crystals">Voodoo Doll > Crystals</p>
+          <p class="spell-voodoo">Spell > Voodoo Doll</p>
+          <p class="crystals-spell">Crystals > Spell</p>
+        </article>
+      </section>
+    </section>
+    <section class="right-section" id="rightSection">
+        <h1 class="computer-emoji" id="computerEmoji">💻</h1>
+        <p class="computer-player" id="computerPlayer">Computer</p>
+        <p class="computer-wins" id="computerWins">Wins:<span class="computer-num-wins" id="computerNumWins"></span>
+    </section>
+  </main>
+  <script src="main.js"></script>
+  <script src="player.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
