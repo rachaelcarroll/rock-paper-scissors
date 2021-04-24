@@ -1,10 +1,14 @@
 class Player{
-  contructor(name, token, wins){
+  contructor(name, token){
     this.name = name;
     this.token = token;
-    this.wins = wins;
+    this.wins = 0;
   }
 
+  takeTurn(){
+
+  }
+  
   saveWinsToStorage(){
 
 

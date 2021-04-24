@@ -1,7 +1,10 @@
+var player1 = new Player('Human','🧙')
+var computer = new Player('Computer', '💻')
+
 class Game{
   constructor(type){
-    this.human = new Player();
-    this.computer = new Player();
+    this.human = player1;
+    this.computer = computer;
     this.gameType = type;
     this.humanFighter = null;
     this.computerFighter = null;
@@ -15,6 +18,7 @@ class Game{
       this.fighters = ['spell', 'voodoo doll', 'crystals']
     }
   }
+  
   drawGame(){
     if(this.humanFighter === this.computerFighter) {
       return true
