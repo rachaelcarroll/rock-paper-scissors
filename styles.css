@@ -1,10 +1,16 @@
-body {
+/* *{
+  border: 1px solid red;
+} */
+html {
+  height: 100%;
+  width: 100%;
+}
+  body {
   font-family: "Cinzel", sans-serif;
-  /* background-color: #101010; */
   color: white;
   font-weight: 400;
   margin: 0px;
-  height: 100vh;
+  height: 100%;
 }
 
 .main-page {
@@ -22,7 +28,7 @@ body {
   align-items: center;
   background-color: #383838;
   width: 12%;
-  height: 100%;
+  height: auto;
 }
 
 .player-emoji,
@@ -35,7 +41,7 @@ body {
 .computer-player {
   font-size: 20px;
   font-weight: bolder;
-  margin: 10px 0px 0px 0px;
+  padding: 10px;
 }
 
 .human-wins,
@@ -45,6 +51,7 @@ body {
 
 .middle-section{
   width: 76%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,13 +65,15 @@ body {
 }
 
 .choose-game {
-  font-size: 25px;
+  font-size: 30px;
   margin: 10px 0px 10px 0px;
 }
 
 .game-choices-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .classic-game,
@@ -73,23 +82,29 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #101010;
+  border-radius: 5px;
+  width: 250px;
 }
 
 .classic-game {
-  margin: 60px 0px 60px 0px;
+  margin: 50px 0px 40px 0px;
+}
+
+.magic-game {
+  margin-bottom: 40px;
 }
 
 .classic-game:hover,
 .magic-game:hover{
-  background-color: #585858;
+  background-color: #383838;
   cursor: pointer;
 }
 
 .classic-header,
 .magic-header {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bolder;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   margin: 10px 0px 5px 0px;
 }
 
@@ -99,6 +114,12 @@ body {
   margin: 0px;
   padding: 10px;
 }
+
+img {
+  height: 150px;
+  width: 150px;
+}
+
 
 .hidden {
   display: none;
