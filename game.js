@@ -11,26 +11,32 @@ class Game{
     this.fighters = [];
   }
 
+  randomFighter(){
+      var index = Math.floor(Math.random() * this.fighters.length)
+      this.computerFighter = this.fighters[index]
+      return this.computerFighter;
+  }
+
   chooseGame(){
     if(this.gameType === 'Classic') {
-      this.fighters = ['rock', 'paper', 'scissors']
-    } else if(this.gameChoice === 'Magic') {
-      this.fighters = ['spell', 'voodoo doll', 'crystals']
+      this.fighters.push('rock', 'paper', 'scissors')
+    } else if(this.gameType === 'Magic') {
+      this.fighters.push('spell', 'voodoo doll', 'crystals')
     }
   }
-  
+
   drawGame(){
     if(this.humanFighter === this.computerFighter) {
       return true
-    } else {
-      return false
+    }
     }
 
+  findWinner(gameType){
+
+
   }
 
-  findWinner(){
 
-  }
 
   resetGame(){
 
