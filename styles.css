@@ -42,6 +42,7 @@ html {
   font-size: 20px;
   font-weight: bolder;
   padding: 10px;
+  margin: 0px;
 }
 
 .human-wins,
@@ -65,7 +66,7 @@ html {
   border: 3px solid rebeccapurple;
   border-radius: 50px;
   padding: 0px 20px 0px 20px;
-  background-color: #585858;
+  background-color: transparent;
   opacity: 80%;
 }
 
@@ -81,11 +82,10 @@ html {
   width: 100%;
 }
 
-.game-play-section{
+.game-play-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin: 100px; */
   width: 100%;
 }
 
@@ -108,9 +108,11 @@ html {
 }
 
 .classic-game:hover,
-.magic-game:hover{
+.magic-game:hover,
+.change-game:hover{
   background-color: #383838;
   cursor: pointer;
+  border: 2px solid black;
 }
 
 .classic-header,
@@ -126,6 +128,19 @@ html {
   font-size: 16px;
   margin: 0px;
   padding: 10px;
+}
+
+.change-game {
+  font-family: "Cinzel", sans-serif;
+  color: white;
+  background-color: #101010;
+  font-size: 16px;
+  height: 50px;
+  width: 100px;
+  border: 2px solid white;
+  margin: 20px 0px 0px 0px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 img {
