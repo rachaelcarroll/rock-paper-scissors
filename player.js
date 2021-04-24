@@ -5,10 +5,6 @@ class Player{
     this.wins = wins;
   }
 
-  takeTurn(){
-
-  }
-
   saveWinsToStorage(){
 
 
@@ -16,12 +12,9 @@ class Player{
 
   retrieveWinsFromStorage(){
 
-    
+
   }
 }
-
-
-
 
 
 // A player.js file that contains a Player class.
@@ -29,4 +22,3 @@ class Player{
 // constructor - properties should include: name (ex: 'hannah'), token (ex: '⭐️'), wins (ex: 0)
 // saveWinsToStorage
 // retrieveWinsFromStorage
-// takeTurn

@@ -3,14 +3,18 @@ class Game{
     this.human = new Player();
     this.computer = new Player();
     this.gameType = type;
-    this.humanTurn = null;
-    this.computerTurn = null;
     this.humanFighter = null;
     this.computerFighter = null;
-    this.classicFighters = ['rock', 'paper', 'scissors'];
-    this.magicFighters = ['spell', 'voodoo', 'crystals'];
+    this.fighters = [];
   }
 
+  chooseGame(){
+    if(this.gameType === 'Classic') {
+      this.fighters = ['rock', 'paper', 'scissors']
+    } else if(this.gameChoice === 'Magic') {
+      this.fighters = ['spell', 'voodoo doll', 'crystals']
+    }
+  }
   drawGame(){
     if(this.humanFighter === this.computerFighter) {
       return true
