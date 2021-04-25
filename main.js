@@ -65,53 +65,58 @@ function playGame(event){
 function chooseFighter(event){
   if(event.target.id === 'spell'){
     game.humanFighter = 'spell';
-    hide(chooseFighterSection);
-    show(changeGameBtn);
-    game.randomFighter();
-    show(displayFightersSection)
-    displayFighters(game.humanFighter, game.computerFighter);
-    // findGameWinner();
+    // hide(chooseFighterSection);
+    // show(changeGameBtn);
+    // game.randomFighter();
+    // show(displayFightersSection)
+    // displayFighters(game.humanFighter, game.computerFighter);
 
   }else if(event.target.id === 'voodoo'){
     game.humanFighter = 'voodoo';
-    hide(chooseFighterSection);
-    show(changeGameBtn);
-    game.randomFighter();
-    show(displayFightersSection)
-    displayFighters(game.humanFighter, game.computerFighter);
+    // hide(chooseFighterSection);
+    // show(changeGameBtn);
+    // game.randomFighter();
+    // show(displayFightersSection)
+    // displayFighters(game.humanFighter, game.computerFighter);
 
   }else if(event.target.id === 'crystals'){
     game.humanFighter = 'crystals';
-    hide(chooseFighterSection);
-    show(changeGameBtn);
-    game.randomFighter();
-    show(displayFightersSection)
-    displayFighters(game.humanFighter, game.computerFighter);
+    // hide(chooseFighterSection);
+    // show(changeGameBtn);
+    // game.randomFighter();
+    // show(displayFightersSection)
+    // displayFighters(game.humanFighter, game.computerFighter);
 
   }else if(event.target.id === 'rock') {
     game.humanFighter = 'rock';
-    hide(chooseFighterSection);
-    show(changeGameBtn);
-    game.randomFighter();
-    show(displayFightersSection)
-    displayFighters(game.humanFighter, game.computerFighter);
+    // hide(chooseFighterSection);
+    // show(changeGameBtn);
+    // game.randomFighter();
+    // show(displayFightersSection)
+    // displayFighters(game.humanFighter, game.computerFighter);
 
   } else if(event.target.id === 'paper'){
     game.humanFighter = 'paper';
-    hide(chooseFighterSection);
-    show(changeGameBtn);
-    game.randomFighter();
-    show(displayFightersSection)
-    displayFighters(game.humanFighter, game.computerFighter);
+    // hide(chooseFighterSection);
+    // show(changeGameBtn);
+    // game.randomFighter();
+    // show(displayFightersSection)
+    // displayFighters(game.humanFighter, game.computerFighter);
 
   } else if(event.target.id === 'scissors'){
     game.humanFighter = 'scissors';
-    hide(chooseFighterSection);
-    show(changeGameBtn);
-    game.randomFighter();
-    show(displayFightersSection)
-    displayFighters(game.humanFighter, game.computerFighter);
+    // hide(chooseFighterSection);
+    // show(changeGameBtn);
+    // game.randomFighter();
+    // show(displayFightersSection)
+    // displayFighters(game.humanFighter, game.computerFighter);
   }
+  hide(chooseFighterSection);
+  show(changeGameBtn);
+  game.randomFighter();
+  show(displayFightersSection)
+  displayFighters(game.humanFighter, game.computerFighter);
+}
 
   function displayFighters(humanFighter, computerFighter){
     displayFightersSection.innerHTML = '';
@@ -124,7 +129,6 @@ function chooseFighter(event){
     </article>`
      findGameWinner();
   }
-}
 
  function findGameWinner(){
    if(game.findWinner()){
