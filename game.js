@@ -1,42 +1,51 @@
-var player1 = new Player('Human','🧙')
-var computer = new Player('Computer', '💻')
-
-class Game{
-  constructor(type){
-    this.human = player1;
-    this.computer = computer;
-    this.gameType = type;
+class Game {
+  constructor(){
+    this.human = new Player('Human','🧙');
+    this.computer = new Player('Computer', '💻');
+    this.gameType = null;
     this.humanFighter = null;
     this.computerFighter = null;
     this.fighters = [];
   }
 
+  randomFighter(){
+      var index = Math.floor(Math.random() * this.fighters.length)
+      this.computerFighter = this.fighters[index]
+      return this.computerFighter;
+  }
+
   chooseGame(){
     if(this.gameType === 'Classic') {
-      this.fighters = ['rock', 'paper', 'scissors']
-    } else if(this.gameChoice === 'Magic') {
-      this.fighters = ['spell', 'voodoo doll', 'crystals']
+      this.fighters.push('rock', 'paper', 'scissors')
+    } else if(this.gameType === 'Magic') {
+      this.fighters.push('spell', 'voodoo', 'crystals')
     }
   }
-  
+
   drawGame(){
     if(this.humanFighter === this.computerFighter) {
       return true
-    } else {
-      return false
+    }
     }
 
-  }
-
   findWinner(){
-
+    if(this.humanFighter === 'rock' && this.computerFighter === 'scissors' || this.humanFighter === 'paper' && this.computerFighter === 'rock' || this.humanFighter === 'scissors' && this.computerFighter === 'paper') {
+      this.human.wins += 1;
+      return true;
+    } else if(this.humanFighter === 'voodoo' && this.computerFighter === 'crystals' || this.humanFighter === 'crystals' && this.computerFighter === 'spell' || this.humanFighter === 'spell' && this.computerFighter === 'voodoo') {
+      this.human.wins += 1;
+      return true;
+    } else {
+      this.computer.wins += 1;
+      return false
+    }
+  }
   }
 
-  resetGame(){
+  // resetGame(){
+  //
+  // }
 
-  }
-
-}
 
 
 
