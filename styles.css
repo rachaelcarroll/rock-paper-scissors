@@ -89,6 +89,10 @@ html {
   width: 100%;
 }
 
+.display-fighters {
+  display: flex;
+}
+
 .classic-game,
 .magic-game {
   display: flex;
