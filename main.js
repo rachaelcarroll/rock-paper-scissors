@@ -7,8 +7,9 @@ var chooseFighterSection = document.getElementById('chooseFighterSection');
 var displayFightersSection = document.getElementById('displayFighters');
 var numPlayerWins = document.getElementById('numPlayerWins');
 var numComputerWins = document.getElementById('numComputerWins');
+var changeGameBtn = document.getElementById('changeGame');
 
-var game;
+var game = new Game();
 //---------------EVENT LISTENERS-----------------//
 
 gameContainer.addEventListener('click', function(){
@@ -19,6 +20,7 @@ chooseFighterSection.addEventListener('click', function(){
   chooseFighter(event);
 });
 
+changeGameBtn.addEventListener('click', changeGame)
 //---------------FUNCTIONS------------------//
 
 function hide(element){
@@ -31,30 +33,31 @@ function show(element){
 
 function playGame(event){
   if(event.target.id === 'classicGame'){
-    hide(classicGame);
-    hide(magicGame);
-    middleHeader.innerText = 'Choose Your Classic Fighter!'
+    hide(gameChoicesContainer);
+    chooseFighterSection.innerHTML = '';
+    show(chooseFighterSection);
+    middleHeader.innerText = 'Choose Your Fighter!'
     chooseFighterSection.innerHTML += `
     <img id='rock' src='Assets/rock.png' alt='rock icon'>
     <img id='paper' src='Assets/paper.png' alt='paper icon'>
     <img id='scissors' src='Assets/scissors.png' alt='scissors icon'>
     `
-    game = new Game();
     game.gameType = 'Classic';
     console.log(game.gameType);
     game.chooseGame();
+
   } else if(event.target.id === 'magicGame'){
-    hide(classicGame);
-    hide(magicGame);
-    middleHeader.innerText = 'Choose Your Magic Fighter!'
+    hide(gameChoicesContainer);
+    chooseFighterSection.innerHTML = '';
+    show(chooseFighterSection);
+    middleHeader.innerText = 'Choose Your Fighter!'
     chooseFighterSection.innerHTML += `
     <img class='spell-fighter' id='spell' src='Assets/spell.png' alt='spell icon'>
     <img class='voodoo-fighter' id='voodoo' src='Assets/voodoo.png' alt='voodoo icon'>
     <img class='crystals-fighter' id='crystals' src='Assets/crystals.png' alt='crystals icon'>
     `
-    game = new Game();
     game.gameType = 'Magic';
-    console.log(game.gameType);
+    console.log(game);
     game.chooseGame();
   }
 }
@@ -63,47 +66,55 @@ function chooseFighter(event){
   if(event.target.id === 'spell'){
     game.humanFighter = 'spell';
     hide(chooseFighterSection);
+    show(changeGameBtn);
     game.randomFighter();
+    show(displayFightersSection)
     displayFighters(game.humanFighter, game.computerFighter);
-    findGameWinner();
+    // findGameWinner();
 
-  } else if(event.target.id === 'voodoo'){
+  }else if(event.target.id === 'voodoo'){
     game.humanFighter = 'voodoo';
     hide(chooseFighterSection);
+    show(changeGameBtn);
     game.randomFighter();
+    show(displayFightersSection)
     displayFighters(game.humanFighter, game.computerFighter);
-    findGameWinner();
 
-  } else if(event.target.id === 'crystals'){
+  }else if(event.target.id === 'crystals'){
     game.humanFighter = 'crystals';
     hide(chooseFighterSection);
+    show(changeGameBtn);
     game.randomFighter();
+    show(displayFightersSection)
     displayFighters(game.humanFighter, game.computerFighter);
-    findGameWinner();
 
-  } else if(event.target.id === 'rock') {
+  }else if(event.target.id === 'rock') {
     game.humanFighter = 'rock';
     hide(chooseFighterSection);
+    show(changeGameBtn);
     game.randomFighter();
+    show(displayFightersSection)
     displayFighters(game.humanFighter, game.computerFighter);
-    findGameWinner();
 
   } else if(event.target.id === 'paper'){
     game.humanFighter = 'paper';
     hide(chooseFighterSection);
+    show(changeGameBtn);
     game.randomFighter();
+    show(displayFightersSection)
     displayFighters(game.humanFighter, game.computerFighter);
-    findGameWinner();
 
   } else if(event.target.id === 'scissors'){
     game.humanFighter = 'scissors';
     hide(chooseFighterSection);
+    show(changeGameBtn);
     game.randomFighter();
+    show(displayFightersSection)
     displayFighters(game.humanFighter, game.computerFighter);
-    findGameWinner();
   }
 
   function displayFighters(humanFighter, computerFighter){
+    displayFightersSection.innerHTML = '';
     displayFightersSection.innerHTML += `
     <article class="human-fighter" id="humanFighter">
       <img id=${humanFighter} src='Assets/${humanFighter}.png' alt='${humanFighter} icon'>
@@ -111,24 +122,48 @@ function chooseFighter(event){
     <article class="computer-fighter" id="computerFighter">
       <img id=${computerFighter} src='Assets/${computerFighter}.png' alt='${computerFighter} icon'>
     </article>`
+     findGameWinner();
   }
 }
 
  function findGameWinner(){
    if(game.findWinner()){
+    middleHeader.innerText = '👏 PLAYER1 WINS! 👏';
     numPlayerWins.innerText = game.human.wins;
-    chooseGame.innerText = '👏 PLAYER1 WINS! 👏';
   } else if(game.drawGame()){
-    chooseGame.innerText = '😭 DRAW GAME! 😭'  
+    middleHeader.innerText = '😭 DRAW GAME! 😭';
   } else {
+    middleHeader.innerText = '😈 COMPUTER WINS THIS ROUND! 😈'
     numComputerWins.innerText = game.computer.wins;
-    chooseGame.innerText = '😈 COMPUTER WINS THIS ROUND! 😈'
   }
+  game.resetGame();
 }
 
-//saveWinsToStorage
-//resetgame
+function changeGame(){
+  middleHeader.innerText = 'Choose Your Game!'
+  show(gameChoicesContainer);
+  hide(displayFightersSection);
+  hide(chooseFighterSection);
+  hide(changeGameBtn);
+  console.log(game);
+}
 
+// function resetBoard() {
+//   game.resetGame();
+// }
+
+
+// function retrieveWins(){
+//
+// }
+// if(game.gameType === 'Magic'){
+  //   // show(chooseFighterSection);
+  //   chooseFighterSection.innerHTML += `
+  //   <img class='spell-fighter' id='spell' src='Assets/spell.png' alt='spell icon'>
+  //   <img class='voodoo-fighter' id='voodoo' src='Assets/voodoo.png' alt='voodoo icon'>
+  //   <img class='crystals-fighter' id='crystals' src='Assets/crystals.png' alt='crystals icon'>
+  //   `
+  // }
 
 
 //change innertext of choose game/fighter to win or loss or draw
