@@ -65,36 +65,35 @@ function chooseFighter(event){
     hide(chooseFighterSection);
     game.randomFighter();
     displayFighters(game.humanFighter, game.computerFighter);
-    game.findWinner();
-    console.log(game)
+    findGameWinner();
 
   } else if(event.target.id === 'voodoo'){
     game.humanFighter = 'voodoo';
     hide(chooseFighterSection);
     game.randomFighter();
     displayFighters(game.humanFighter, game.computerFighter);
-    game.findWinner();
+    findGameWinner();
 
   } else if(event.target.id === 'crystals'){
     game.humanFighter = 'crystals';
     hide(chooseFighterSection);
     game.randomFighter();
     displayFighters(game.humanFighter, game.computerFighter);
-    game.findWinner();
+    findGameWinner();
 
   } else if(event.target.id === 'rock') {
     game.humanFighter = 'rock';
     hide(chooseFighterSection);
     game.randomFighter();
     displayFighters(game.humanFighter, game.computerFighter);
-    game.findWinner();
+    findGameWinner();
 
   } else if(event.target.id === 'paper'){
     game.humanFighter = 'paper';
     hide(chooseFighterSection);
     game.randomFighter();
     displayFighters(game.humanFighter, game.computerFighter);
-    game.findWinner();
+    findGameWinner();
 
   } else if(event.target.id === 'scissors'){
     game.humanFighter = 'scissors';
@@ -119,14 +118,16 @@ function chooseFighter(event){
    if(game.findWinner()){
     numPlayerWins.innerText = game.human.wins;
     chooseGame.innerText = '👏 PLAYER1 WINS! 👏';
-
-    //saveWinsToStorage
-    //resetgame
-
-
+  } else if(game.drawGame()){
+    chooseGame.innerText = '😭 DRAW GAME! 😭'  
+  } else {
+    numComputerWins.innerText = game.computer.wins;
+    chooseGame.innerText = '😈 COMPUTER WINS THIS ROUND! 😈'
   }
 }
 
+//saveWinsToStorage
+//resetgame
 
 
 
