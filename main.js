@@ -70,14 +70,14 @@ function chooseFighter(event){
      game.humanFighter = 'voodoo';
   } else if(event.target.id === 'crystals'){
      game.humanFighter = 'crystals';
-  } else if(event.target.id === 'rock') {
+   } else if(event.target.id === 'witch'){
+     game.humanFighter = 'witch';
+   } else if(event.target.id === 'rock') {
      game.humanFighter = 'rock';
   } else if(event.target.id === 'paper'){
      game.humanFighter = 'paper';
   } else if(event.target.id === 'scissors'){
      game.humanFighter = 'scissors';
-  } else if(event.target.id === 'witch'){
-    game.humanFighter = 'witch';
   }
   hide(chooseFighterSection);
   show(changeGameBtn);
@@ -98,12 +98,13 @@ function chooseFighter(event){
      findGameWinner();
   }
 
+
  function findGameWinner(){
    if(game.findWinner()){
     middleHeader.innerText = '👏 PLAYER1 WINS! 👏';
     numPlayerWins.innerText = game.human.retrieveWinsFromStorage();
   } else if(game.drawGame()){
-    middleHeader.innerText = '😭 DRAW GAME! 😭';
+    middleHeader.innerText = '🤷🏻 DRAW GAME! 🤷🏼‍♂️';
   } else {
     middleHeader.innerText = '😈 COMPUTER WINS THIS ROUND! 😈'
     numComputerWins.innerText = game.computer.retrieveWinsFromStorage();
