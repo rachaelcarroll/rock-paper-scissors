@@ -1,8 +1,8 @@
 class Game {
-  constructor(){
+  constructor(type){
     this.human = new Player('Human','🧙');
     this.computer = new Player('Computer', '💻');
-    this.gameType = null;
+    this.gameType = type;
     this.humanFighter = null;
     this.computerFighter = null;
     this.fighters = [];
@@ -16,9 +16,9 @@ class Game {
 
   chooseGame(){
     if(this.gameType === 'Classic') {
-      this.fighters.push('rock', 'paper', 'scissors')
+      this.fighters = ['rock', 'paper', 'scissors']
     } else if(this.gameType === 'Magic') {
-      this.fighters.push('spell', 'voodoo', 'crystals')
+      this.fighters = ['spell', 'voodoo', 'crystals', 'witch']
     }
   }
 
@@ -26,27 +26,40 @@ class Game {
     if(this.humanFighter === this.computerFighter) {
       return true
     }
-    }
+  }
 
   findWinner(){
-    if(this.humanFighter === 'rock' && this.computerFighter === 'scissors' || this.humanFighter === 'paper' && this.computerFighter === 'rock' || this.humanFighter === 'scissors' && this.computerFighter === 'paper') {
+    this.human.wins = game.human.retrieveWinsFromStorage();
+    this.computer.wins = game.computer.retrieveWinsFromStorage();
+    if(this.humanFighter === 'rock' && this.computerFighter === 'scissors' ||
+    this.humanFighter === 'paper' && this.computerFighter === 'rock' ||
+    this.humanFighter === 'scissors' && this.computerFighter === 'paper') {
       this.human.wins += 1;
+      this.human.saveWinsToStorage();
       return true;
-    } else if(this.humanFighter === 'voodoo' && this.computerFighter === 'crystals' || this.humanFighter === 'crystals' && this.computerFighter === 'spell' || this.humanFighter === 'spell' && this.computerFighter === 'voodoo') {
+    } else if(this.humanFighter === 'voodoo' && this.computerFighter === 'witch' ||
+      this.humanFighter === 'crystals' && this.computerFighter === 'spell' ||
+      this.humanFighter === 'spell' && this.computerFighter === 'voodoo'|| this.humanFighter === 'witch' && this.computerFighter === 'crystals') {
       this.human.wins += 1;
+      this.human.saveWinsToStorage();
       return true;
+    } else if(this.drawGame()){
+      return false;
     } else {
       this.computer.wins += 1;
+      this.computer.saveWinsToStorage();
       return false
-    }
   }
+}
+
+  resetGame(){
+    setTimeout(function(){
+      middleHeader.innerText = "Choose Your Fighter!";
+      hide(displayFightersSection);
+      show(chooseFighterSection);
+    }, 2000);
   }
-
-  // resetGame(){
-  //
-  // }
-
-
+}
 
 
 
