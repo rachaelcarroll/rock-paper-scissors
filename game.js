@@ -57,7 +57,7 @@ class Game {
       middleHeader.innerText = "Choose Your Fighter!";
       hide(displayFightersSection);
       show(chooseFighterSection);
-    }, 1500);
+    }, 2000);
   }
 }
 
