@@ -29,18 +29,16 @@ class Game {
   }
 
   findWinner() {
-    this.human.wins = game.human.retrieveWinsFromStorage();
-    this.computer.wins = game.computer.retrieveWinsFromStorage();
-    if (this.humanFighter === 'rock' && this.computerFighter === 'scissors' ||
-      this.humanFighter === 'paper' && this.computerFighter === 'rock' ||
-      this.humanFighter === 'scissors' && this.computerFighter === 'paper') {
-      this.human.wins += 1;
-      this.human.saveWinsToStorage();
-      return true;
-    } else if (this.humanFighter === 'voodoo' && this.computerFighter === 'witch' ||
-      this.humanFighter === 'crystals' && this.computerFighter === 'spell' ||
-      this.humanFighter === 'spell' && this.computerFighter === 'voodoo' ||
-      this.humanFighter === 'witch' && this.computerFighter === 'crystals') {
+    this.updateWins();
+    if ((this.humanFighter === 'rock' && this.computerFighter === 'scissors') ||
+      (this.humanFighter === 'paper' && this.computerFighter === 'rock') ||
+      (this.humanFighter === 'scissors' && this.computerFighter === 'paper') ||
+      (this.humanFighter === 'voodoo' && this.computerFighter === 'witch') ||
+      (this.humanFighter === 'voodoo' && this.computerFighter === 'crystals') ||
+      (this.humanFighter === 'crystals' && this.computerFighter === 'spell') ||
+      (this.humanFighter === 'spell' && this.computerFighter === 'voodoo') ||
+      (this.humanFighter === 'witch' && this.computerFighter === 'crystals') ||
+      (this.humanFighter === 'witch' && this.computerFighter === 'spell')) {
       this.human.wins += 1;
       this.human.saveWinsToStorage();
       return true;
@@ -59,5 +57,10 @@ class Game {
       hide(displayFightersSection);
       show(chooseFighterSection);
     }, 2000);
+  }
+
+  updateWins(){
+    this.human.wins = game.human.retrieveWinsFromStorage();
+    this.computer.wins = game.computer.retrieveWinsFromStorage();
   }
 }
