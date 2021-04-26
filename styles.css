@@ -93,6 +93,10 @@ html {
   width: 100%;
 }
 
+.choose-fighter-section:hover{
+  cursor: pointer;
+}
+
 .display-fighters {
   display: flex;
 }
