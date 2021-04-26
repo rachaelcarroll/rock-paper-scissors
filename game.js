@@ -29,8 +29,7 @@ class Game {
   }
 
   findWinner() {
-    this.human.wins = game.human.retrieveWinsFromStorage();
-    this.computer.wins = game.computer.retrieveWinsFromStorage();
+    this.updateWins();
     if ((this.humanFighter === 'rock' && this.computerFighter === 'scissors') ||
       (this.humanFighter === 'paper' && this.computerFighter === 'rock') ||
       (this.humanFighter === 'scissors' && this.computerFighter === 'paper') ||
@@ -58,5 +57,10 @@ class Game {
       hide(displayFightersSection);
       show(chooseFighterSection);
     }, 2000);
+  }
+
+  updateWins(){
+    this.human.wins = game.human.retrieveWinsFromStorage();
+    this.computer.wins = game.computer.retrieveWinsFromStorage();
   }
 }
