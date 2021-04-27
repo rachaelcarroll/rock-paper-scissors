@@ -14,7 +14,7 @@ The goal of [final solo project](https://frontend.turing.edu/projects/module-1/r
 To solidify and demonstrate the understanding of:
 
 1. Writing clean and DRY HTML, CSS, and JavaScript
-2. Understand the difference between the data model and how the data is displayed on the DOM
+2. The difference between the data model and how the data is displayed on the DOM
 3. The interaction between multiple class files
 4. Implementation of client-side data persistence by utilizing JSON and localStorage
 
