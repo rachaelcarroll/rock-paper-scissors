@@ -87,10 +87,10 @@ function displayFighters(humanFighter, computerFighter) {
   displayFightersSection.innerHTML = '';
   displayFightersSection.innerHTML += `
     <article class="human-fighter" id="humanFighter">
-      <img id=${humanFighter} src='Assets/${humanFighter}.png' alt='${humanFighter} icon'>
+      <img id=${humanFighter} src='./assets/${humanFighter}.png' alt='${humanFighter} icon'>
     </article>
     <article class="computer-fighter" id="computerFighter">
-      <img id=${computerFighter} src='Assets/${computerFighter}.png' alt='${computerFighter} icon'>
+      <img id=${computerFighter} src='./assets/${computerFighter}.png' alt='${computerFighter} icon'>
     </article>`
   findGameWinner();
 };
