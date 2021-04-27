@@ -41,7 +41,7 @@ To solidify and demonstrate the understanding of:
 **[Back to top](#table-of-contents)**
 
 ## Instructions for Running Project
-View the deployed page [here]() 
+View the deployed page [here](https://rachaelcarroll.github.io/rock-paper-scissors/) 
 **OR**
 1. Clone this [repository](https://github.com/rachaelcarroll/rock-paper-scissors)
 2. `cd` into the repository in your terminal
@@ -64,6 +64,9 @@ If you would like to contribute, please fork this repository and clone it down t
 
 #### Project Manager
 - [Heather Faerber](https://github.com/hfaerber), a Mod1 frontend instructor
+
+#### Magic Themed Icon Artist
+- [Icongeek26](https://www.flaticon.com/authors/icongeek26) 
 **************************************************************************
 Created for [Turing School of Software & Design](https://turing.io/)
 
