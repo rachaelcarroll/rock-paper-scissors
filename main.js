@@ -37,9 +37,9 @@ function playGame(event) {
     show(chooseFighterSection);
     middleHeader.innerText = 'Choose Your Fighter!'
     chooseFighterSection.innerHTML += `
-    <img id='rock' src='Assets/rock.png' alt='rock icon'>
-    <img id='paper' src='Assets/paper.png' alt='paper icon'>
-    <img id='scissors' src='Assets/scissors.png' alt='scissors icon'>
+    <img id='rock' src='./assets/rock.png' alt='rock icon'>
+    <img id='paper' src='./assets/paper.png' alt='paper icon'>
+    <img id='scissors' src='./assets/scissors.png' alt='scissors icon'>
     `
     game.gameType = 'Classic';
     game.chooseGame();
@@ -50,10 +50,10 @@ function playGame(event) {
     show(chooseFighterSection);
     middleHeader.innerText = 'Choose Your Fighter!'
     chooseFighterSection.innerHTML += `
-    <img id='spell' src='Assets/spell.png' alt='spell icon'>
-    <img id='voodoo' src='Assets/voodoo.png' alt='voodoo icon'>
-    <img id='crystals' src='Assets/crystals.png' alt='crystals icon'>
-    <img id='witch' src='Assets/witch.png' alt='witch icon'>
+    <img id='spell' src='./assets/spell.png' alt='spell icon'>
+    <img id='voodoo' src='./assets/voodoo.png' alt='voodoo icon'>
+    <img id='crystals' src='./assets/crystals.png' alt='crystals icon'>
+    <img id='witch' src='./assets/witch.png' alt='witch icon'>
     `
     game.gameType = 'Magic';
     game.chooseGame();
