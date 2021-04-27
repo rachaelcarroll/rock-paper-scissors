@@ -60,7 +60,7 @@ If you would like to contribute, please fork this repository and clone it down t
 
 ## Credits
 #### Author
-- The HTML, CSS, and Javascript for Rock, Paper, Scissors was written by [Rachael Carroll](https://github.com/rachaelcarroll), for her final solo project of Mod1
+- [Rachael Carroll](https://github.com/rachaelcarroll) wrote the HTML, CSS, and Javascript for Rock, Paper, Scissors for her final solo project of Mod1
 
 #### Project Manager
 - [Heather Faerber](https://github.com/hfaerber), a Mod1 frontend instructor
