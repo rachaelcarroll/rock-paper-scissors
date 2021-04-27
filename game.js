@@ -56,11 +56,11 @@ class Game {
       middleHeader.innerText = "Choose Your Fighter!";
       hide(displayFightersSection);
       show(chooseFighterSection);
-    }, 2000);
+    }, 1500);
   }
 
   updateWins(){
-    this.human.wins = game.human.retrieveWinsFromStorage();
-    this.computer.wins = game.computer.retrieveWinsFromStorage();
+    this.human.wins = this.human.retrieveWinsFromStorage();
+    this.computer.wins = this.computer.retrieveWinsFromStorage();
   }
 }
