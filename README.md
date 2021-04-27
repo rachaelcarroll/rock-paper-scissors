@@ -8,7 +8,7 @@
 - [Credits](#credits)
 
 ## Overview and Project Goals
-The goal of [this final solo project](https://frontend.turing.edu/projects/module-1/rock-paper-scissors-solo.html) for Mod1 at [Turing School of Software and Design](https://turing.io/) was to build a Rock, Paper, Scissors game from scratch using HTML, CSS, and Vanilla Javascript.
+The goal of [final solo project](https://frontend.turing.edu/projects/module-1/rock-paper-scissors-solo.html) for Mod1 at [Turing School of Software and Design](https://turing.io/) was to build a Rock, Paper, Scissors game from scratch using HTML, CSS, and Vanilla Javascript.
 
 ### Why was this project created?
 To solidify and demonstrate the understanding of:
