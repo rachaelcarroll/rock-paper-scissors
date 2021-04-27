@@ -68,6 +68,5 @@ If you would like to contribute, please fork this repository and clone it down t
 #### Magic Themed Icon Artist
 - [Icongeek26](https://www.flaticon.com/authors/icongeek26) 
 **************************************************************************
-Created for [Turing School of Software & Design](https://turing.io/)
 
 **[Back to top](#table-of-contents)**
