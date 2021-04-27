@@ -34,17 +34,18 @@ To solidify and demonstrate the understanding of:
 
 
 ## Future Additions
-- *New game* functionality to reset the wins and start a new game.
-- *Choose your emoji* functionality to toggle through Player1 emojis.
-- *Light & dark mode* to alter the game board based on the user's Classic or Magic game choice.
+- *New game* functionality to reset the wins and start a new game
+- *Choose your emoji* functionality to toggle through Player1 emojis
+- *Light & dark mode* to alter the game board based on the user's Classic or Magic game choice
 
 **[Back to top](#table-of-contents)**
 
 ## Instructions for Running Project
-View the deployed page [here]() **OR**
+View the deployed page [here]() 
+**OR**
 1. Clone this [repository](https://github.com/rachaelcarroll/rock-paper-scissors)
-2. `cd` into the repository in your terminal.
-3. `open index.html` in your terminal to view it on your browser.
+2. `cd` into the repository in your terminal
+3. `open index.html` in your terminal to view it on your browser
 
 ## Want to contribute?
 If you would like to contribute, please fork this repository and clone it down to your local machine. Once you've successfully implemented the changes in code necessary for your intended contribution without changing any of the current functionality of main, submit a pull request for author to review the changes.
@@ -59,11 +60,11 @@ If you would like to contribute, please fork this repository and clone it down t
 
 ## Credits
 #### Author
-- The HTML, CSS, and Javascript for Rock, Paper, Scissors was written by [Rachael Carroll](https://github.com/rachaelcarroll), for her final solo project of Mod1.
+- The HTML, CSS, and Javascript for Rock, Paper, Scissors was written by [Rachael Carroll](https://github.com/rachaelcarroll), for her final solo project of Mod1
 
 #### Project Manager
-- [Heather Faerber](https://github.com/hfaerber), a Mod1 frontend instructor.
+- [Heather Faerber](https://github.com/hfaerber), a Mod1 frontend instructor
 **************************************************************************
-Created for [Turing School of Software & Design](https://turing.io/).
+Created for [Turing School of Software & Design](https://turing.io/)
 
 **[Back to top](#table-of-contents)**
